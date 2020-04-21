@@ -3,6 +3,8 @@ LABEL maintainer="smartlab-dev@mpt.mp.br"
 
 WORKDIR /app
 
+COPY requirements.txt /app/requirements.txt
+
 RUN pip3 install -r /app/requirements.txt
 
 ENV LANG C.UTF-8
