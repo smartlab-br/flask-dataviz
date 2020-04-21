@@ -3,6 +3,8 @@ LABEL maintainer="smartlab-dev@mpt.mp.br"
 
 WORKDIR /app
 
+ENV PYTHONPATH /app:/usr/lib/python3.8/site-packages
+
 COPY requirements.txt /app/requirements.txt
 
 RUN apk --update --no-cache add build-base libffi-dev openssl-dev libffi openssl ca-certificates && \
