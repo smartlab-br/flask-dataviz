@@ -1,4 +1,4 @@
-FROM smartlab/flask-dataviz
+FROM smartlab/flask
 LABEL maintainer="smartlab-dev@mpt.mp.br"
 
 WORKDIR /app
