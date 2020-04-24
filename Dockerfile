@@ -5,7 +5,11 @@ ENV MPLLOCALFREETYPE 1
 
 COPY requirements.txt /app/requirements.txt
 
-RUN apt-get install -y libsasl2-dev gcc firefox-esr wget && \
-    webdrivermanager firefox chrome --linkpath /usr/local/bin
+RUN apt-get install -y libsasl2-dev gcc firefox-esr firefox-geckodriver && \
+    pip3 install -r /app/requirements.txt && \
+    webdrivermanager firefox chrome --linkpath /usr/local/bin && \
+    apt-get clean
+
+ENV PATH $PATH:/etc/geckodriver/.
 
 ENTRYPOINT ["sh", "/start.sh"]
