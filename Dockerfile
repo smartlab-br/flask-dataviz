@@ -7,11 +7,12 @@ ENV MPLLOCALFREETYPE 1
 
 COPY requirements.txt /app/requirements.txt
 
-RUN apk --update --no-cache add build-base libffi-dev openssl-dev libffi openssl ca-certificates && \
-    apk --update --no-cache add cyrus-sasl-dev libstdc++ gfortran openblas-dev libxml2 libxslt-dev libpng-dev uwsgi jpeg-dev zlib-dev && \
-    ln -s /usr/include/locale.h /usr/include/xlocale.h && \
-    pip3 install -r /app/requirements.txt && \
-    apk del build-base libffi-dev openssl-dev libffi openssl ca-certificates
+# RUN apk --update --no-cache add build-base libffi-dev openssl-dev libffi openssl ca-certificates && \
+#     apk --update --no-cache add cyrus-sasl-dev libstdc++ gfortran openblas-dev libxml2 libxslt-dev libpng-dev uwsgi jpeg-dev zlib-dev && \
+#     ln -s /usr/include/locale.h /usr/include/xlocale.h && \
+RUN apt-get install -y libsasl2-dev gcc && \
+    pip3 install -r /app/requirements.txt
+#     apk del build-base libffi-dev openssl-dev libffi openssl ca-certificates
 
 # ENV LANG C.UTF-8
 # ENV DEBUG 0
