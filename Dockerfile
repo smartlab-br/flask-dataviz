@@ -1,9 +1,9 @@
 FROM smartlab/flask:development
 LABEL maintainer="smartlab-dev@mpt.mp.br"
 
-ENV MPLLOCALFREETYPE 1
-
 USER root
+
+ENV MPLLOCALFREETYPE 1
 
 COPY requirements.txt /app/requirements.txt
 
