@@ -1,8 +1,6 @@
 FROM smartlab/flask:latest
 LABEL maintainer="smartlab-dev@mpt.mp.br"
 
-USER root
-
 ENV MPLLOCALFREETYPE 1
 
 COPY requirements.txt /app/requirements.txt
@@ -12,7 +10,5 @@ RUN apt-get install -y libsasl2-dev g++ gcc firefox-esr && \
     webdrivermanager firefox --linkpath /usr/local/bin && \
     apt-get remove -y gcc g++ libsasl2-dev && \
     apt-get clean
-
-USER uwsgi
 
 ENTRYPOINT ["sh", "/start.sh"]
