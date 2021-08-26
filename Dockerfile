@@ -1,4 +1,4 @@
-FROM smartlab/flask:latest
+FROM mptrabalho/flask:latest
 LABEL maintainer="smartlab-dev@mpt.mp.br"
 
 ENV MPLLOCALFREETYPE 1
