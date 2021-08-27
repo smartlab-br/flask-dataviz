@@ -3,7 +3,7 @@ thrift-sasl==0.4a1
 impyla==0.16.2
 pandas==1.0.5
 matplotlib==3.2.1
-webdrivermanager==0.8.0
+webdrivermanager==0.10.0
 bokeh==2.0.1
 folium==0.10.1
 selenium==3.141.0
