@@ -1,6 +1,4 @@
 Cython==0.29.14
-thrift-sasl==0.4a1
-impyla==0.16.2
 pandas==1.3.2
 matplotlib==3.4.3
 webdrivermanager==0.10.0
